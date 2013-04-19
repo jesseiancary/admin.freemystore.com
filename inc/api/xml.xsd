@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	
+	<xs:element name="FreeMyStore">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Header" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="UserName" type="xs:string" maxOccurs="1"/>
+						<xs:element name="APIKey" type="xs:string" maxOccurs="1"/>
+					</xs:sequence>
+				</xs:complexType>
+				</xs:element>
+				<xs:element name="Actions" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="UpdateInventory" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="SKU" type="xs:string" maxOccurs="1"/>
+										<xs:element name="QTY" type="xs:string" maxOccurs="1"/>
+										<xs:element name="InStock" type="xs:string" maxOccurs="1"/>
+										<xs:element name="ManageStock" type="xs:string" maxOccurs="1"/>
+										<xs:element name="UseConfigManageStock" type="xs:string" maxOccurs="1"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+</xs:schema>
